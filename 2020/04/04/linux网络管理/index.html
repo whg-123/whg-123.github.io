@@ -11,14 +11,13 @@
   <meta name="description" content="linux网络管理1.网卡命令方式1.1 传统网卡命令机制12345678传统的网卡命令方式：	以太网卡 eth[0,1,2……]		无线网卡 wlan[0,1,2……]	当服务器网卡都是同类型网卡时建议使用传统网卡命令机制。centos7网卡命名：当服务网卡有多种类型时建议使用  1.2 centos7网卡命令机制123456789101112systemd对网卡的命令方式：	规则1：如果从bi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="whg">
-<meta property="og:url" content="http://yoursite.com/2020/04/04/whg/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/04/04/linux%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="linux网络管理1.网卡命令方式1.1 传统网卡命令机制12345678传统的网卡命令方式：	以太网卡 eth[0,1,2……]		无线网卡 wlan[0,1,2……]	当服务器网卡都是同类型网卡时建议使用传统网卡命令机制。centos7网卡命名：当服务网卡有多种类型时建议使用  1.2 centos7网卡命令机制123456789101112systemd对网卡的命令方式：	规则1：如果从bi">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403102949541.png">
-<meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103124465.png">
-<meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103304749.png">
-<meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103456821.png">
+<meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200404200820243.png">
+<meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200404200836703.png">
+<meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200404200848781.png">
 <meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103613943.png">
 <meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103805280.png">
 <meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403132641883.png">
@@ -41,10 +40,10 @@
 <meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403153521918.png">
 <meta property="og:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403153608341.png">
 <meta property="article:published_time" content="2020-04-04T06:10:48.000Z">
-<meta property="article:modified_time" content="2020-04-04T09:08:51.730Z">
+<meta property="article:modified_time" content="2020-04-04T12:08:54.027Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403102949541.png">
+<meta name="twitter:image" content="c:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200404200820243.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -180,7 +179,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-whg" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-linux网络管理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -192,7 +191,7 @@
   
 
         
-        <a href="/2020/04/04/whg/" class="archive-article-date">
+        <a href="/2020/04/04/linux%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" class="archive-article-date">
   	<time datetime="2020-04-04T06:10:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
 </a>
         
@@ -219,12 +218,11 @@
 
 <h5 id="1-4-回归传统命令"><a href="#1-4-回归传统命令" class="headerlink" title="1.4 回归传统命令"></a>1.4 回归传统命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.修改网卡配置文件</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403102949541.png" alt="image-20200403102949541"></p>
-<p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103124465.png" alt="image-20200403103124465"></p>
+<p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200404200820243.png" alt="image-20200404200820243"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.编辑&#x2F;etc&#x2F;default&#x2F;grub配置文件，在以GRUB_CMDLINE_LINUX开头的行内rhgb的前面加上net.ifnames&#x3D;0 biosdevname&#x3D;0</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103304749.png" alt="image-20200403103304749"></p>
-<p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103456821.png" alt="image-20200403103456821"></p>
+<p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200404200836703.png" alt="image-20200404200836703"></p>
+<p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200404200848781.png" alt="image-20200404200848781"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3.为grub2生成其配置文件</span><br><span class="line">	grub2-mkconfig -o &#x2F;etc&#x2F;grub2.cfg</span><br></pre></td></tr></table></figure>
 
 <p><img src="C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200403103613943.png" alt="image-20200403103613943"></p>
@@ -375,7 +373,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/04/whg/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/04/linux%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
     </div>
 </div>
 
