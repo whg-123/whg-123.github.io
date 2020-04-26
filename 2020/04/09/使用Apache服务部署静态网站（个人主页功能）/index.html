@@ -5,25 +5,25 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="http://whg-123.github.io">
   <title>使用Apache服务部署静态网站（个人主页功能） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="使用Apache服务部署静态网站（个人主页功能）1.安装Apache的软件包，Apache的软件包名称为httpd1[root@localhost ~]# yum -y install httpd  2.启用httpd服务程序并将加入到开机启动项中，并持续为用户提供web服务1234[root@localhost ~]# systemctl start httpd[root@localhost ~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Apache服务部署静态网站（个人主页功能）">
-<meta property="og:url" content="http://yoursite.com/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/index.html">
+<meta property="og:url" content="http://whg-123.github.io/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="使用Apache服务部署静态网站（个人主页功能）1.安装Apache的软件包，Apache的软件包名称为httpd1[root@localhost ~]# yum -y install httpd  2.启用httpd服务程序并将加入到开机启动项中，并持续为用户提供web服务1234[root@localhost ~]# systemctl start httpd[root@localhost ~">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409171603813.png">
-<meta property="og:image" content="http://yoursite.com/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409175506684.png">
-<meta property="og:image" content="http://yoursite.com/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180432228.png">
-<meta property="og:image" content="http://yoursite.com/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180451519.png">
+<meta property="og:image" content="http://whg-123.github.io/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409171603813.png">
+<meta property="og:image" content="http://whg-123.github.io/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409175506684.png">
+<meta property="og:image" content="http://whg-123.github.io/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180432228.png">
+<meta property="og:image" content="http://whg-123.github.io/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180451519.png">
 <meta property="article:published_time" content="2020-04-09T10:05:58.743Z">
 <meta property="article:modified_time" content="2020-04-09T10:05:58.988Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409171603813.png">
+<meta name="twitter:image" content="http://whg-123.github.io/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409171603813.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -183,7 +183,7 @@
 
 <h5 id="2-启用httpd服务程序并将加入到开机启动项中，并持续为用户提供web服务"><a href="#2-启用httpd服务程序并将加入到开机启动项中，并持续为用户提供web服务" class="headerlink" title="2.启用httpd服务程序并将加入到开机启动项中，并持续为用户提供web服务"></a>2.启用httpd服务程序并将加入到开机启动项中，并持续为用户提供web服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# systemctl start httpd</span><br><span class="line">[root@localhost ~]# systemctl enable httpd</span><br><span class="line">ln -s &#39;&#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;httpd.service&#39; &#39;&#x2F;etc&#x2F;systemd&#x2F;system&#x2F;multi-user.</span><br><span class="line">target.wants&#x2F;httpd.service&#39;</span><br></pre></td></tr></table></figure>
 
-<h5 id="3-打开浏览器就可以看到web服务的httpd服务程序的默认页面"><a href="#3-打开浏览器就可以看到web服务的httpd服务程序的默认页面" class="headerlink" title="3.打开浏览器就可以看到web服务的httpd服务程序的默认页面"></a>3.打开浏览器就可以看到web服务的httpd服务程序的默认页面</h5><p><img src="/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409171603813.png" alt="image-20200409171603813"></p>
+<h5 id="3-打开浏览器就可以看到web服务的httpd服务程序的默认页面"><a href="#3-打开浏览器就可以看到web服务的httpd服务程序的默认页面" class="headerlink" title="3.打开浏览器就可以看到web服务的httpd服务程序的默认页面"></a>3.打开浏览器就可以看到web服务的httpd服务程序的默认页面</h5><p><img src="/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409171603813.png" alt="image-20200409171603813"></p>
 <h5 id="4-网站数据默认存放在-var-www-html目录中，而当前网站普遍的首页面名称是index-html，所以我们向此目录中写入一个文件"><a href="#4-网站数据默认存放在-var-www-html目录中，而当前网站普遍的首页面名称是index-html，所以我们向此目录中写入一个文件" class="headerlink" title="4.网站数据默认存放在/var/www/html目录中，而当前网站普遍的首页面名称是index.html，所以我们向此目录中写入一个文件"></a>4.网站数据默认存放在/var/www/html目录中，而当前网站普遍的首页面名称是index.html，所以我们向此目录中写入一个文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# echo &quot;hello linux&quot; &gt; &#x2F;var&#x2F;www&#x2F;html&#x2F;index.html</span><br></pre></td></tr></table></figure>
 
 <h5 id="5-将selinux从enforcing状态变为permissive状态"><a href="#5-将selinux从enforcing状态变为permissive状态" class="headerlink" title="5.将selinux从enforcing状态变为permissive状态"></a>5.将selinux从enforcing状态变为permissive状态</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# setenforce 0</span><br><span class="line">[root@localhost ~]# getenforce</span><br><span class="line">Permissive</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;enforcing：强制启用安全策略模式，将拦截服务的不合法请求。</span><br><span class="line">&#x2F;&#x2F;permissive：遇到服务越权访问时，只发出警告而不强制拦截。</span><br><span class="line">&#x2F;&#x2F;disabled：对于越权的行为不警告也不拦截。</span><br></pre></td></tr></table></figure>
@@ -192,15 +192,15 @@
 
 <h5 id="7-在用户家目录中建立用于保存网站数据的目录及首页面文件。另外，还需要把家目录的权限修改为755，保证其他人也有权限读取里面的内容"><a href="#7-在用户家目录中建立用于保存网站数据的目录及首页面文件。另外，还需要把家目录的权限修改为755，保证其他人也有权限读取里面的内容" class="headerlink" title="7.在用户家目录中建立用于保存网站数据的目录及首页面文件。另外，还需要把家目录的权限修改为755，保证其他人也有权限读取里面的内容"></a>7.在用户家目录中建立用于保存网站数据的目录及首页面文件。另外，还需要把家目录的权限修改为755，保证其他人也有权限读取里面的内容</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mkdir &#x2F;home&#x2F;whg&#x2F;public_html</span><br><span class="line">[root@localhost ~]# echo &quot;hello laowang,hello linux world&quot; &gt;&#x2F;home&#x2F;whg&#x2F;public_html&#x2F;index.html</span><br><span class="line">[root@localhost ~]# chmod -R 755 &#x2F;home&#x2F;whg&#x2F;</span><br></pre></td></tr></table></figure>
 
-<h5 id="8-重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址-用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）"><a href="#8-重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址-用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）" class="headerlink" title="8.重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址/~用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）"></a>8.重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址/~用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）</h5><p><img src="/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409175506684.png" alt="image-20200409175506684"></p>
+<h5 id="8-重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址-用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）"><a href="#8-重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址-用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）" class="headerlink" title="8.重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址/~用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）"></a>8.重新启动httpd服务程序，在浏览器地址栏中输入网址，其格式为“网址/~用户名”（其中的波浪号是必须的，而且网址、波浪号、用户名之间没有空格）</h5><p><img src="/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409175506684.png" alt="image-20200409175506684"></p>
 <h5 id="9-如果还进不去这时候就要考虑关闭防火墙和开启HTTP协议相关的安全策略"><a href="#9-如果还进不去这时候就要考虑关闭防火墙和开启HTTP协议相关的安全策略" class="headerlink" title="9.如果还进不去这时候就要考虑关闭防火墙和开启HTTP协议相关的安全策略"></a>9.如果还进不去这时候就要考虑关闭防火墙和开启HTTP协议相关的安全策略</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# setsebool -P httpd_enable_homedirs&#x3D;on</span><br><span class="line">[root@localhost ~]# systemctl stop firewalld.service</span><br><span class="line">[root@localhost ~]# systemctl disable firewalld.service</span><br><span class="line">Removed symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;multi-user.target.wants&#x2F;firewalld.service.</span><br><span class="line">Removed symlink &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;dbus-org.fedoraproject.FirewallD1.service.</span><br></pre></td></tr></table></figure>
 
 <h5 id="10-使用htpasswd名称生成密码数据库。-c表示第一次生成，后面再分-别添加密码数据库的存放文件，以及验证要用到的用户名称（该用户不必是系统中已有的-本地账户）。"><a href="#10-使用htpasswd名称生成密码数据库。-c表示第一次生成，后面再分-别添加密码数据库的存放文件，以及验证要用到的用户名称（该用户不必是系统中已有的-本地账户）。" class="headerlink" title="10.使用htpasswd名称生成密码数据库。-c表示第一次生成，后面再分 别添加密码数据库的存放文件，以及验证要用到的用户名称（该用户不必是系统中已有的 本地账户）。"></a>10.使用htpasswd名称生成密码数据库。-c表示第一次生成，后面再分 别添加密码数据库的存放文件，以及验证要用到的用户名称（该用户不必是系统中已有的 本地账户）。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# htpasswd -c &#x2F;etc&#x2F;httpd&#x2F;passwd whg</span><br><span class="line">New password:  &#x2F;&#x2F;这里输入用于网页验证的密码</span><br><span class="line">Re-type new password:		&#x2F;&#x2F;在输入一遍进行确认</span><br><span class="line">Adding password for user linuxprobe</span><br></pre></td></tr></table></figure>
 
 <h5 id="11-编辑个人用户主页功能的配置文件。把第-31～35-行的参数信息修改成下列内-容，其中井号（-）开头的内容为刘遄老师添加的注释信息，可将其忽略。随后保存并退出配-置文件，重启-httpd-服务程序即可生效"><a href="#11-编辑个人用户主页功能的配置文件。把第-31～35-行的参数信息修改成下列内-容，其中井号（-）开头的内容为刘遄老师添加的注释信息，可将其忽略。随后保存并退出配-置文件，重启-httpd-服务程序即可生效" class="headerlink" title="11.编辑个人用户主页功能的配置文件。把第 31～35 行的参数信息修改成下列内 容，其中井号（#）开头的内容为刘遄老师添加的注释信息，可将其忽略。随后保存并退出配 置文件，重启 httpd 服务程序即可生效"></a>11.编辑个人用户主页功能的配置文件。把第 31～35 行的参数信息修改成下列内 容，其中井号（#）开头的内容为刘遄老师添加的注释信息，可将其忽略。随后保存并退出配 置文件，重启 httpd 服务程序即可生效</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> [root@localhost ~]# vim &#x2F;etc&#x2F;httpd&#x2F;conf.d&#x2F;userdir.conf </span><br><span class="line"> 31 &lt;Directory &quot;&#x2F;home&#x2F;*&#x2F;public_html&quot;&gt;</span><br><span class="line"> 32     AllowOverride all</span><br><span class="line"> 33     authuserfile &quot;&#x2F;etc&#x2F;httpd&#x2F;passwd&quot;</span><br><span class="line"> 34     authname &quot;My privately website&quot;</span><br><span class="line"> 35     authtype basic</span><br><span class="line"> 36     require user whg</span><br><span class="line"> 37 &lt;&#x2F;Directory&gt;</span><br><span class="line">[root@localhost ~]# systemctl restart httpd</span><br></pre></td></tr></table></figure>
 
-<h5 id="12-最后再次使用浏览器访问"><a href="#12-最后再次使用浏览器访问" class="headerlink" title="12.最后再次使用浏览器访问"></a>12.最后再次使用浏览器访问</h5><p><img src="/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180432228.png" alt="image-20200409180432228"></p>
-<p><img src="/.com//C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180451519.png" alt="image-20200409180451519"></p>
+<h5 id="12-最后再次使用浏览器访问"><a href="#12-最后再次使用浏览器访问" class="headerlink" title="12.最后再次使用浏览器访问"></a>12.最后再次使用浏览器访问</h5><p><img src="/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180432228.png" alt="image-20200409180432228"></p>
+<p><img src="/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/C:%5CUsers%5Cwhg%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200409180451519.png" alt="image-20200409180451519"></p>
 
       
 
@@ -280,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://whg-123.github.io/2020/04/09/%E4%BD%BF%E7%94%A8Apache%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8A%9F%E8%83%BD%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,6 +293,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/04/26/ceshi/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ceshi
+        
+      </div>
+    </a>
   
   
     <a href="/2020/04/05/STP%E7%94%9F%E6%88%90%E6%A0%91/" id="article-nav-older" class="article-nav-link-wrap">
