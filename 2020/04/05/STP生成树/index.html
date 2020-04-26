@@ -16,7 +16,7 @@
 <meta property="og:description" content="STP生成树协议产生背景 1二层网络中会出现环路，这种环路会出现广播风暴。  STP定义12345678910111213141516171819定义：二层网络中用于消除环路的协议什么是BDPU：	桥协议数据单元，用于传递stp协议相关报文		分类：		配置BPDU：用于传递stp的配置信息		TCN BPDU：用于通告拓扑变更信息消除环路的思想：	将网络拓扑修剪为树形		1.选择树根节点		2.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-05T04:58:28.299Z">
-<meta property="article:modified_time" content="2020-04-10T11:05:38.085Z">
+<meta property="article:modified_time" content="2020-04-26T07:18:45.158Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -221,6 +221,7 @@
 
 <h4 id="边缘端口"><a href="#边缘端口" class="headerlink" title="边缘端口"></a>边缘端口</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.什么是边缘端口？</span><br><span class="line">	边缘端口是从阻塞状态直接到转发状态的端口。</span><br><span class="line">	</span><br><span class="line">2.边缘端口有什么特点？</span><br><span class="line">	边缘端口有不收BPDU与直接从阻塞状态变为转发状态的特点</span><br><span class="line">	</span><br><span class="line">3.边缘端口为什么不收BPDU，收到BPDU会怎样？</span><br><span class="line">	边缘端口不收BPDU，因为边缘端口不参与拓扑计算。如果边缘端口收到BPDU，会丧失边缘端口属性，变成普通端口，且保持转发状态。也就是说，当边缘端口收到BPDU时，会造成网络拥塞</span><br><span class="line">	</span><br><span class="line">4.边缘端口会发送BPDU吗，为什么？</span><br><span class="line">	边缘端口会周期性发送BPDU，因为需要让下游设备感知到交换机的存在。如果不发送BPDU，则会造成环路，导致网络不可用</span><br></pre></td></tr></table></figure>
 
+<p>![](C:\Users\whg\Pictures\Saved Pictures\cover1.jpg)</p>
 
       
 
