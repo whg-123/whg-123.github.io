@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>主观题 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">主观题</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-01</span>
+  </div>
+  <div class="post-content">
+    <h4 id="1、星型-树形与网状拓扑的特征，优缺点对比，以及各自适用于什么场景"><a href="#1、星型-树形与网状拓扑的特征，优缺点对比，以及各自适用于什么场景" class="headerlink" title="1、星型/树形与网状拓扑的特征，优缺点对比，以及各自适用于什么场景"></a>1、星型/树形与网状拓扑的特征，优缺点对比，以及各自适用于什么场景</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">星型拓扑：</span><br><span class="line">	特征：通过中央节点将其他节点互联，到达目标节点只有一条线路</span><br><span class="line">	优点：结构简单，便于维护，组网成本低，某个节点故障不会影响其他节点</span><br><span class="line">	缺点：中央节点不能出现故障，一旦故障网络就会瘫痪，可靠性低</span><br><span class="line">	适用场景：适用于小规模组网，并且预算不高，对网络可靠性要求不高</span><br><span class="line">	</span><br><span class="line">树形拓扑：</span><br><span class="line">	特征：星型拓扑进一步的发散型，成树状，拥有多个分支节点。</span><br><span class="line">	优点：结构简单，便于维护，组网成本低，某个节点故障不会影响其他部分节点</span><br><span class="line">	缺点：中央节点压力大，中央节点和分支节点一旦故障会影响后面的节点也不能使用</span><br><span class="line">	适用场景：适用于小规模组网，并且预算不高，对网络可靠性要求不高</span><br><span class="line">	</span><br><span class="line">网状拓扑：</span><br><span class="line">	特征：任意节点之间两两互联，有多条线路可达</span><br><span class="line">	优点：线路可靠性高</span><br><span class="line">	缺点：结构复杂，不便于维护，设备成本较高</span><br><span class="line">	适用场景：适用于大规模网络搭建，对网络可靠性比较高，否则会有很大的经济损失</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、详细描述OSI7层的功能，以及OSI和TCP-IP参考模型的区别"><a href="#2、详细描述OSI7层的功能，以及OSI和TCP-IP参考模型的区别" class="headerlink" title="2、详细描述OSI7层的功能，以及OSI和TCP/IP参考模型的区别"></a>2、详细描述OSI7层的功能，以及OSI和TCP/IP参考模型的区别</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">OSI参考模型功能：</span><br><span class="line">	应用层：</span><br><span class="line">		为应用程序提供网络服务，直接与人进行人机交互（以人类友好的方式输出至显示器）</span><br><span class="line">	表示层：</span><br><span class="line">		定义数据格式、结构；数据加密、压缩</span><br><span class="line">	会话层：</span><br><span class="line">		建立、维护、拆除应用程序间的会话</span><br><span class="line">		用来区分同一个应用程序的不同访问者</span><br><span class="line">		</span><br><span class="line">	传输层：</span><br><span class="line">		数据分段（对一个大的数据进行分段操作）</span><br><span class="line">		建立端到端连接，端口号用于区分同一台计算机的不同应用程序（端口号范围：1-65535）</span><br><span class="line">		维护传输的可靠性</span><br><span class="line">		TCP：可靠的传输</span><br><span class="line">		UDP：不可靠的传输</span><br><span class="line">		</span><br><span class="line">	网络层：</span><br><span class="line">		IP地址寻址，指导IP报文转发的路径信息（路由）</span><br><span class="line">		</span><br><span class="line">	数据链路层：</span><br><span class="line">		Mac地址寻址</span><br><span class="line">		</span><br><span class="line">	物理层：</span><br><span class="line">		定义电压、接口、线缆标准、传输距离、传输介质等物理参数</span><br><span class="line">		</span><br><span class="line">OSI与TCP&#x2F;IP参考模型的区别：</span><br><span class="line">	1.OSI参考模型存在的问题：</span><br><span class="line">		划分层次过多，把会话层、表示层单独地做为一层意义不大</span><br><span class="line">		IP协议成为事实的网络层唯一协议</span><br><span class="line">		</span><br><span class="line">	2.TCP&#x2F;IP参考模型只允许网络层使用的是IP协议</span><br><span class="line">	</span><br><span class="line">	3.TCP&#x2F;IP参考模型分为4层划分方法和5层划分方法：</span><br><span class="line">		官方书面标准是4层划分方法，厂商遵守的标准是5层划分方法</span><br><span class="line">		</span><br><span class="line">		4层划分方法：</span><br><span class="line">			应用层：</span><br><span class="line">				包括有应用层、表示层、会话层</span><br><span class="line">				</span><br><span class="line">			传输层</span><br><span class="line">			</span><br><span class="line">			网络层</span><br><span class="line">			</span><br><span class="line">			网络接口层</span><br><span class="line">			</span><br><span class="line">		5层划分方法：</span><br><span class="line">			应用层：</span><br><span class="line">				包括有应用层、表示层、会话层</span><br><span class="line">				</span><br><span class="line">			传输层</span><br><span class="line">			</span><br><span class="line">			网络层</span><br><span class="line">			</span><br><span class="line">			数据链路层</span><br><span class="line">			</span><br><span class="line">			物理层</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
