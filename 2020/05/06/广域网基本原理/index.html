@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>广域网基本原理 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">广域网基本原理</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-06</span>
+  </div>
+  <div class="post-content">
+    <h2 id="广域网基本原理"><a href="#广域网基本原理" class="headerlink" title="广域网基本原理"></a>广域网基本原理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这里指的是广义的广域网：</span><br><span class="line">	除局域网之外的都是广域网</span><br></pre></td></tr></table></figure>
+
+<h4 id="1、局域网的不足"><a href="#1、局域网的不足" class="headerlink" title="1、局域网的不足"></a>1、局域网的不足</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.以太网等局域网技术无法支持远程传输</span><br><span class="line">2.企业通过大量设备级连将局域网扩展到超远距离是不现实的</span><br><span class="line">3.即使可以扩展局域网的范围，但普通组织没有专用的长距离线路</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、使用的协议及线缆"><a href="#2、使用的协议及线缆" class="headerlink" title="2、使用的协议及线缆"></a>2、使用的协议及线缆</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">物理层：</span><br><span class="line">	串行线缆（带宽最高4M），在运营商一侧使用</span><br><span class="line">	光纤，EPON（在光纤网络传递以太网帧）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">数据链路层：</span><br><span class="line">	HDLC（淘汰）</span><br><span class="line">	帧中继（淘汰）</span><br><span class="line">	PPP：点到点协议（一条链路上只有一头一尾设备，不会出现第三台设备），在以太网络中极有可能出现多台设备，某些场景使用</span><br><span class="line">	以太网：某些场景使用</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网络层：</span><br><span class="line">	IP：唯一事实标准</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、连接方式"><a href="#3、连接方式" class="headerlink" title="3、连接方式"></a>3、连接方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">分类：	</span><br><span class="line">	电路交换：（与打电话走的同一个数据传输模式）</span><br><span class="line">		PSTN：</span><br><span class="line">			使用的是专线，消耗的资源较多，收费较贵</span><br><span class="line">			带宽只有56K，按小时计费，目前仍然还有使用</span><br><span class="line">			</span><br><span class="line">		ISDN（淘汰）：</span><br><span class="line">			带宽可以到达128k，可扩展，差一张卡就可以增加128k</span><br><span class="line">			</span><br><span class="line">    分组交换：</span><br><span class="line">    	帧中继（淘汰），ADSL的出现使他淘汰</span><br><span class="line">    	</span><br><span class="line">	ADSL：</span><br><span class="line">		利用电话线传输信号，带宽可高达1-4M</span><br><span class="line">		</span><br><span class="line">	EPON：</span><br><span class="line">		在光网络上传输以太网帧</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、广域网接入分类"><a href="#4、广域网接入分类" class="headerlink" title="4、广域网接入分类"></a>4、广域网接入分类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">分类：</span><br><span class="line">	接入到互联网</span><br><span class="line">	远程连接到分支机构：</span><br><span class="line">		高速专线</span><br><span class="line">		VPN</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>

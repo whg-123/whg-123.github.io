@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>局域网基本原理 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">局域网基本原理</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-06</span>
+  </div>
+  <div class="post-content">
+    <h2 id="局域网基本原理"><a href="#局域网基本原理" class="headerlink" title="局域网基本原理"></a>局域网基本原理</h2><h3 id="1、使用的协议及线缆"><a href="#1、使用的协议及线缆" class="headerlink" title="1、使用的协议及线缆"></a>1、使用的协议及线缆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">物理层：</span><br><span class="line">	双绞线（常见，对网络链路的带宽和延迟要求并没有那么严格可以使用此线缆）</span><br><span class="line">	同轴电缆（淘汰）</span><br><span class="line">	光纤（常见，对网络链路带宽和延迟要求高，使用此线缆）</span><br><span class="line">	无线电（WiFi）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">数据链路层：</span><br><span class="line">	在早期时候，组建局域网在二层中有三种选择：</span><br><span class="line">		令牌环（淘汰）：是一根环形总线</span><br><span class="line">			缺点：</span><br><span class="line">				1.传输效率低，一次只能一个人发送数据</span><br><span class="line">				2.任何一个人发送数据，其他人都能收到</span><br><span class="line">				</span><br><span class="line">		FDDI（光纤分布式接口，淘汰）：是一根环形总线</span><br><span class="line">			优点：</span><br><span class="line">				传输速度高</span><br><span class="line">			缺点：</span><br><span class="line">				协议复杂</span><br><span class="line">				</span><br><span class="line">		以太网：</span><br><span class="line">			成为数据链路层的唯一事实标准</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/image-20200506142836348.png" alt="image-20200506142836348"></p>
+<p><img src="/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/image-20200506142921022.png" alt="image-20200506142921022"></p>
+<p><img src="/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/image-20200506142939234.png" alt="image-20200506142939234"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">网络层：</span><br><span class="line">	IPX（淘汰）</span><br><span class="line">	Apple talk（淘汰）</span><br><span class="line">	IP：成为网络层唯一事实标准</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、局域网设备"><a href="#2、局域网设备" class="headerlink" title="2、局域网设备"></a>2、局域网设备</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">集线器：</span><br><span class="line">	内部为总线型拓扑，工作在物理层（靠把电缆连通传输数据）</span><br><span class="line">	任意时间只能由一台主机占用总线，连接的所有的设备位于同一冲突域</span><br><span class="line">	工作在物理层，没有寻址能力，所有数据泛洪式转发</span><br><span class="line">	集线器与交换机很相像，但是不同点在于交换机有独立的cpu、内存等硬件。</span><br><span class="line">冲突域：</span><br><span class="line">	设备发送数据会产生冲突的网络范围（在同一个冲突域最典型的特征就是这个范围内的所有电脑、主机同一时间只能有一台发送数据，其他人都得等着）</span><br><span class="line">	集线器的所有接口在同一个冲突域</span><br><span class="line">	交换机的每个接口都是一个独立的冲突域</span><br><span class="line">	</span><br><span class="line">交换机：</span><br><span class="line">	内部每两个接口都有一条独立线路，每个接口都是独立的冲突域</span><br><span class="line">	工作在数据链路层，基于Mac地址寻址，数据可单点转发</span><br><span class="line">	</span><br><span class="line">CSMA&#x2F;CD：</span><br><span class="line">	带冲突检测的载波侦听多路访问</span><br><span class="line">	基本原理：</span><br><span class="line">		每一台设备发送数据之前会先发送侦听信号，去侦听当前这根线是否被占用，如果没有被占用，那就发数据，如果被占用，那就等一会再发，直到等四次之后侦听还是被占用，那么就不发送此数据了</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、局域网线缆"><a href="#3、局域网线缆" class="headerlink" title="3、局域网线缆"></a>3、局域网线缆</h3><p><strong>双绞线</strong></p>
+<p><img src="/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/image-20200506150010768.png" alt="image-20200506150010768"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">线皮里面有四对线芯，每一对线芯是两根线绞在一起</span><br></pre></td></tr></table></figure>
+
+<p><strong>水晶头</strong></p>
+<p><img src="/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/image-20200506150652535.png" alt="image-20200506150652535"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">水晶头有8块铜片，通过线序来把每根线芯怼到里面去</span><br></pre></td></tr></table></figure>
+
+<h5 id="线序"><a href="#线序" class="headerlink" title="线序"></a>线序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">T568A：白绿、绿、白橙、蓝、白蓝、橙、白棕、棕</span><br><span class="line">T568B：白橙、橙、白绿、蓝、白蓝、绿、白棕、棕</span><br><span class="line"></span><br><span class="line">一般局域网使用的五类线或者超五类线，只有四根线芯用来传输数据的（按照从左至右1、2、3、6号线），另外四根线芯就算剪掉都不影响传输数据，两根用来发送数据（1、3号线），两根用来接收数据（2、6号线），这样子是为了防止传输或接收数据由于隔太近所产生的的电流串扰。</span><br></pre></td></tr></table></figure>
+
+<h5 id="线型"><a href="#线型" class="headerlink" title="线型"></a>线型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">直连线：</span><br><span class="line">	异类直连</span><br><span class="line">	两端线序一致</span><br><span class="line">交叉线：</span><br><span class="line">	同类交叉</span><br><span class="line">	两端线序不一致</span><br><span class="line">	</span><br><span class="line">路由器和PC属于同一类设备（称为数据终端设备）</span><br><span class="line">交换机称为数据中间设备</span><br><span class="line"></span><br><span class="line">现在的网络设备几乎都支持线序的自适应</span><br></pre></td></tr></table></figure>
+
+<h5 id="接口类型"><a href="#接口类型" class="headerlink" title="接口类型"></a>接口类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RJ-45</span><br><span class="line">RJ-11</span><br></pre></td></tr></table></figure>
+
+<h5 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">分类：</span><br><span class="line">	多模光纤：</span><br><span class="line">		纤芯较粗，可传递多种光源</span><br><span class="line">		传输距离短</span><br><span class="line">		成本低</span><br><span class="line">		</span><br><span class="line">	单模光纤：</span><br><span class="line">		纤芯较细，只能传递单一光源</span><br><span class="line">		传输距离远</span><br><span class="line">		成本高</span><br></pre></td></tr></table></figure>
+
+<h5 id="常用的光纤连接器"><a href="#常用的光纤连接器" class="headerlink" title="常用的光纤连接器"></a>常用的光纤连接器</h5><p><img src="/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/image-20200506155645787.png" alt="image-20200506155645787"></p>
+<p><img src="/images/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/image-20200506155653319.png" alt="image-20200506155653319"></p>
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
