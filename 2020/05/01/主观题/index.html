@@ -63,15 +63,15 @@
 
 <h4 id="4、详细描述TCP的传输确认机制，以及传输出现差错是如何处理的"><a href="#4、详细描述TCP的传输确认机制，以及传输出现差错是如何处理的" class="headerlink" title="4、详细描述TCP的传输确认机制，以及传输出现差错是如何处理的"></a>4、详细描述TCP的传输确认机制，以及传输出现差错是如何处理的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">确认机制：</span><br><span class="line">	Seq&#x3D;上一次的ack</span><br><span class="line">	Ack&#x3D;上一次的seq+length</span><br><span class="line">	如果没有接收到，或接收到的是不完整数据，会再次发送Ack请求对方重发</span><br><span class="line">	通过这个机制发送数对方是定是收得到的</span><br></pre></td></tr></table></figure>
 
-<p><img src="../images/%E4%B8%BB%E8%A7%82%E9%A2%98/image-20200507185759679.png" alt="image-20200507185759679"></p>
+<p><img src="/images/%E4%B8%BB%E8%A7%82%E9%A2%98/image-20200507192601898.png" alt="image-20200507192601898"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">主机A建立连接第一次发送数据时，会随机产生一个序列号（是seq，这里的序列号随机为1），数据长度（len）为1024</span><br><span class="line">那么下一次数据的序列号（seq）为上一次的seq+len，以此类推，直到主机B收到</span><br><span class="line">主机B收到之后，会进行差错校验，差错校验通过后数据没有问题会向主机A回复一个包，这个包里有一个确认号（Ack），这里的Ack是表示下一次主机A向主机B发送数据的seq，以此类推</span><br></pre></td></tr></table></figure>
 
 <p><strong>传输出现差错分两种情况处理</strong></p>
 <p><strong>第一种：</strong></p>
-<p><img src="../images/%E4%B8%BB%E8%A7%82%E9%A2%98/image-20200507190136591.png" alt="image-20200507190136591"></p>
+<p><img src="/images/%E4%B8%BB%E8%A7%82%E9%A2%98/image-20200507192620382.png" alt="image-20200507192620382"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当主机A向主机B传输数据时，某个包传输失败那么主机B回复主机A将下一次传输从序列号（seq）为3073数据包开始依次往后传输，如果有传输重复的数据包将会被覆盖。</span><br></pre></td></tr></table></figure>
 
-<h5 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h5><p><img src="../images/%E4%B8%BB%E8%A7%82%E9%A2%98/image-20200507190858512.png" alt="image-20200507190858512"></p>
+<h5 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h5><p><img src="/images/%E4%B8%BB%E8%A7%82%E9%A2%98/image-20200507192654705.png" alt="image-20200507192654705"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当某个数据包需要重新传输时，这时主机B向主机A发送ACK&#x3D;1025，那么主机A会将序列号为1025这个数据包单独的向主机B发送，等待传输完成之后，主机B会重新确认之前主机A传输的所有数据，确认无误后主机B会回复主机A下一次传输的数据序列号（ACK&#x3D;4097）,这是H3C默认的传输机制方式，这种方式会消耗更多资源</span><br></pre></td></tr></table></figure>
 
 
