@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>命令行基础 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">命令行基础</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-08</span>
+  </div>
+  <div class="post-content">
+    <h2 id="命令行基础"><a href="#命令行基础" class="headerlink" title="命令行基础"></a>命令行基础</h2><h4 id="1、访问网络设备命令行接口的方法"><a href="#1、访问网络设备命令行接口的方法" class="headerlink" title="1、访问网络设备命令行接口的方法"></a>1、访问网络设备命令行接口的方法</h4><h5 id="1-1-使用Console口进行连接"><a href="#1-1-使用Console口进行连接" class="headerlink" title="1.1 使用Console口进行连接"></a>1.1 使用Console口进行连接</h5><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508152920792.png" alt="image-20200508152920792"></p>
+<h5 id="1-2-使用AUX口进行连接"><a href="#1-2-使用AUX口进行连接" class="headerlink" title="1.2  使用AUX口进行连接"></a>1.2  使用AUX口进行连接</h5><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153048150.png" alt="image-20200508153048150"></p>
+<h5 id="1-3-使用Telnet进行连接"><a href="#1-3-使用Telnet进行连接" class="headerlink" title="1.3 使用Telnet进行连接"></a>1.3 使用Telnet进行连接</h5><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153109730.png" alt="image-20200508153109730"></p>
+<h5 id="1-4-使用SSH进行连接"><a href="#1-4-使用SSH进行连接" class="headerlink" title="1.4 使用SSH进行连接"></a>1.4 使用SSH进行连接</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SSH（安全外壳）在无安全保证的网络上提供安全的远程登录等服务</span><br><span class="line">由传输协议、验证协议和连接协议三部分组成</span><br><span class="line">使用TCP端口22号</span><br><span class="line">提供Password和Publickey两种验证方式</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153240870.png" alt="image-20200508153240870"></p>
+<h5 id="2、命令行使用入门"><a href="#2、命令行使用入门" class="headerlink" title="2、命令行使用入门"></a>2、命令行使用入门</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">用户视图：</span><br><span class="line">	设备启动后的缺省视图，可查看启动后基本运行状态和统计信息</span><br><span class="line">系统视图：</span><br><span class="line">	配置系统全局通用参数的视图</span><br><span class="line">路由协议视图：</span><br><span class="line">	配置路由协议参数的视图</span><br><span class="line">接口视图：</span><br><span class="line">	配置接口参数的视图</span><br><span class="line">用户线视图：</span><br><span class="line">	配置登录设备的各个用户属性的视图</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-1-各种视图之间的关系"><a href="#2-1-各种视图之间的关系" class="headerlink" title="2.1 各种视图之间的关系"></a>2.1 各种视图之间的关系</h5><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153447201.png" alt="image-20200508153447201"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用Ctrl+Z可以从任意视图直接回到用户视图</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、命令类型"><a href="#3、命令类型" class="headerlink" title="3、命令类型"></a>3、命令类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">读类型：</span><br><span class="line">	用于显示系统配置信息和维护信息，如显示命令display、显示文件信息的命令dir</span><br><span class="line">写类型：</span><br><span class="line">	用于对系统进行配置，如使能信息中心功能的命令info-center enable、配置调试信息开关的命令debugging</span><br><span class="line">执行类型：</span><br><span class="line">	用于执行特定的功能，如ping命令、与ftp服务器建立连接的命令ftp</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、用户角色"><a href="#4、用户角色" class="headerlink" title="4、用户角色"></a>4、用户角色</h4><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153808594.png" alt="image-20200508153808594"></p>
+<h4 id="5、命令行帮助特性"><a href="#5、命令行帮助特性" class="headerlink" title="5、命令行帮助特性"></a>5、命令行帮助特性</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">按？可以查看当前有哪些命令可以使用</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153858556.png" alt="image-20200508153858556"></p>
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153910018.png" alt="image-20200508153910018"></p>
+<h4 id="6、错误提示信息"><a href="#6、错误提示信息" class="headerlink" title="6、错误提示信息"></a>6、错误提示信息</h4><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508153931438.png" alt="image-20200508153931438"></p>
+<h4 id="7、命令行历史记录功能"><a href="#7、命令行历史记录功能" class="headerlink" title="7、命令行历史记录功能"></a>7、命令行历史记录功能</h4><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508154002566.png" alt="image-20200508154002566"></p>
+<h4 id="8、命令行编辑功能"><a href="#8、命令行编辑功能" class="headerlink" title="8、命令行编辑功能"></a>8、命令行编辑功能</h4><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508154059782.png" alt="image-20200508154059782"></p>
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508154112709.png" alt="image-20200508154112709"></p>
+<h4 id="9、常用设备管理命令"><a href="#9、常用设备管理命令" class="headerlink" title="9、常用设备管理命令"></a>9、常用设备管理命令</h4><p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508154136574.png" alt="image-20200508154136574"></p>
+<p><img src="/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/image-20200508154145465.png" alt="image-20200508154145465"></p>
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
