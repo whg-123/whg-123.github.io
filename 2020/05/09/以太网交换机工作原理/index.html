@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>以太网交换机工作原理 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">以太网交换机工作原理</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-09</span>
+  </div>
+  <div class="post-content">
+    <h2 id="以太网交换机工作原理"><a href="#以太网交换机工作原理" class="headerlink" title="以太网交换机工作原理"></a>以太网交换机工作原理</h2><h4 id="1、以太网"><a href="#1、以太网" class="headerlink" title="1、以太网"></a>1、以太网</h4><h5 id="1-1-什么是以太网"><a href="#1-1-什么是以太网" class="headerlink" title="1.1 什么是以太网"></a>1.1 什么是以太网</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">定义：</span><br><span class="line">	传输标准的Ethernet II类型帧的网络</span><br><span class="line">    </span><br><span class="line">特征：</span><br><span class="line">	多路访问，广播式的网络</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-2以太网的分类"><a href="#1-2以太网的分类" class="headerlink" title="1.2以太网的分类"></a>1.2以太网的分类</h5><h5 id="共享式以太网"><a href="#共享式以太网" class="headerlink" title="共享式以太网"></a>共享式以太网</h5><p><img src="/images/%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/image-20200509203418275.png" alt="image-20200509203418275"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">共享式以太网中，所有终端主机都通过总线型拓扑结构互联在一起</span><br><span class="line">局域网中的所有接入终端共享总线的带宽</span><br><span class="line">处于同一个冲突域中</span><br></pre></td></tr></table></figure>
+
+<h5 id="交换式以太网"><a href="#交换式以太网" class="headerlink" title="交换式以太网"></a>交换式以太网</h5><p><img src="/images/%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/image-20200509203552053.png" alt="image-20200509203552053"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在交换式以太网中，所有终端主机通过交换机互联在一起</span><br><span class="line">终端主机独占端口的带宽</span><br><span class="line">交换机的每个端口处于独立的冲突域中</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、以太网帧格式"><a href="#2、以太网帧格式" class="headerlink" title="2、以太网帧格式"></a>2、以太网帧格式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">由目的Mac地址、源Mac地址、服务和类型、Data、校验和组成</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、Mac地址"><a href="#3、Mac地址" class="headerlink" title="3、Mac地址"></a>3、Mac地址</h4><h5 id="3-1什么是mac地址"><a href="#3-1什么是mac地址" class="headerlink" title="3.1什么是mac地址"></a>3.1什么是mac地址</h5><p><img src="/images/%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/image-20200509204126482.png" alt="image-20200509204126482"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">定义：</span><br><span class="line">	每台网络设备生产时就写入的一个全球唯一的物理地址</span><br><span class="line">	</span><br><span class="line">Mac地址写入网络接口卡（网卡）的ROM，也就是说一张网卡，一个Mac地址</span><br><span class="line"></span><br><span class="line">前24位为厂商标识，后24位为设备标识</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-2-什么是Mac地址表"><a href="#3-2-什么是Mac地址表" class="headerlink" title="3.2 什么是Mac地址表"></a>3.2 什么是Mac地址表</h5><p><img src="/images/%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/image-20200509204703874.png" alt="image-20200509204703874"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Mac地址表是存在于交换机中的RAM中，用于记录设备的Mac地址与交换机端口的映射关系（绑定关系），以及交换机端口绑定的是哪个VLAN，重启交换机后，交换机的Mac地址表信息会丢失，并且交换机刚启动时，Mac地址表内无任何内容。</span><br><span class="line"></span><br><span class="line">一个接口可以对应多个Mac地址</span><br><span class="line">一个Mac地址不能对应多个接口</span><br><span class="line">Mac地址老化时间：300秒</span><br><span class="line"></span><br><span class="line">如果设备超过300秒没有发送数据帧，那么Mac地址表中的映射关系会删除</span><br><span class="line">如果设备发送完数据帧，此时在老化时间内换了个交换机的接口继续转发数据帧，那么会讲Mac地址原有的映射关系覆盖掉，写入新的映射关系</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、交换机"><a href="#4、交换机" class="headerlink" title="4、交换机"></a>4、交换机</h4><h5 id="4-1-什么是交换机"><a href="#4-1-什么是交换机" class="headerlink" title="4.1 什么是交换机"></a>4.1 什么是交换机</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">定义：</span><br><span class="line">	工作在数据链路层，通过识别Mac地址来进行数据转发的设备</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-2-交换机数据转发原理"><a href="#4-2-交换机数据转发原理" class="headerlink" title="4.2 交换机数据转发原理"></a>4.2 交换机数据转发原理</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">工作机制：</span><br><span class="line">	1.交换机学习数据帧的源Mac地址，来获得端口和设备Mac地址的映射关系，写入Mac地址表</span><br><span class="line">	2.交换机检查数据帧的目的Mac地址，从Mac地址表中的映射关系来判断把数据帧从哪个接口发出</span><br><span class="line">	3.交换机对于目的Mac地址不存在Mac地址表中的数据帧进行广播处理</span><br><span class="line">	</span><br><span class="line">数据帧的转发方式：</span><br><span class="line">	1.对于目的Mac地址已知的单播帧，交换机查询Mac地址表进行转发</span><br><span class="line">	2.对于目的Mac地址未知的单播帧，交换机进行广播处理</span><br><span class="line">	3.对于广播帧，交换机继续广播处理（Mac地址最大为FF-FF-FF-FF-FF-FF，这个地址就是Mac地址的广播地址）</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、数据传输模式"><a href="#5、数据传输模式" class="headerlink" title="5、数据传输模式"></a>5、数据传输模式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单播：接收者是某一台设备</span><br><span class="line">广播：接收者是所有其他设备</span><br><span class="line">组播：接收者是某一部分设备</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、广播域"><a href="#6、广播域" class="headerlink" title="6、广播域"></a>6、广播域</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">网络中所有能接收到同样广播消息的设备的集合</span><br><span class="line">默认情况下，交换机的所有端口属于同一个广播域，路由器和三层交换机每个接口属于一个广播域</span><br></pre></td></tr></table></figure>
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
