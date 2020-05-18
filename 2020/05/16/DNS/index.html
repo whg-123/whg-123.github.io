@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>DNS - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">DNS</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-16</span>
+  </div>
+  <div class="post-content">
+    <h2 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h2><h4 id="1、产生背景"><a href="#1、产生背景" class="headerlink" title="1、产生背景"></a>1、产生背景</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">通过IP地址访问目标主机，不便于记忆</span><br><span class="line">通过容易记忆的域名来标识主机位置</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、DNS的定义"><a href="#2、DNS的定义" class="headerlink" title="2、DNS的定义"></a>2、DNS的定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DNS：用于域名和IP地址的互相解析</span><br><span class="line"></span><br><span class="line">DNS系统的模式：采用C&#x2F;S模式（客户端&#x2F;服务器模式）</span><br><span class="line"></span><br><span class="line">DNS系统的结构：是一个具有树状层次结构的，联机分布式数据库系统</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、域名的树形层次化结构"><a href="#3、域名的树形层次化结构" class="headerlink" title="3、域名的树形层次化结构"></a>3、域名的树形层次化结构</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">例：www		.sina		.com.cn		.</span><br><span class="line">   主机名		二级域		 顶级域		根域</span><br><span class="line"></span><br><span class="line">	根域：用.表示</span><br><span class="line">	顶级域：主机所处的国家&#x2F;区域，注册人的性质</span><br><span class="line">	二级域：注册人自行创建的名称</span><br><span class="line">	主机名：区域内部的主机的名称</span><br><span class="line">	</span><br><span class="line">**以点号（.）结尾的域名称为完全合格域名FQDN**</span><br><span class="line">**不同等级的域名之间用点号分隔，级别最低的域名写在最左边，而级别最高的域名写最右边**</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、DNS域名解析原理"><a href="#4、DNS域名解析原理" class="headerlink" title="4、DNS域名解析原理"></a>4、DNS域名解析原理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.DNS系统采用客户机&#x2F;服务器架构，使用传输层协议为TCP或UDP，服务器端口号53</span><br><span class="line"></span><br><span class="line">2.域名解析工作是通过调用服务器上的解析器软件完成的</span><br><span class="line"></span><br><span class="line">3.DNS域名解析按照域名空间的分层树状结构自顶至下进行</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/DNS/image-20200516142552882.png" alt="image-20200516142552882"></p>
+<h4 id="5、DNS查询模式"><a href="#5、DNS查询模式" class="headerlink" title="5、DNS查询模式"></a>5、DNS查询模式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">递归查询：</span><br><span class="line">	DNS服务器一定会返回一个确切的查询结果</span><br><span class="line">	客户端到DNS的查询</span><br><span class="line">	</span><br><span class="line">迭代查询：</span><br><span class="line">	DNS服务器会返回一个已知的其他DNS服务器，由请求者自行查询</span><br><span class="line">	DNS服务器到DNS服务器的查询</span><br><span class="line">	</span><br><span class="line">反向查询：</span><br><span class="line">	DNS反向查询允许DNS客户端根据已知的IP地址查找主机所对应的域名</span><br><span class="line">	因特网域名树种设立了一个特殊的in-addr.arpa反向查询域用于反向查询</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>

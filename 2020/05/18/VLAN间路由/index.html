@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>VLAN间路由 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">VLAN间路由</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-18</span>
+  </div>
+  <div class="post-content">
+    <h2 id="VLAN间路由"><a href="#VLAN间路由" class="headerlink" title="VLAN间路由"></a>VLAN间路由</h2><h4 id="1、产生背景"><a href="#1、产生背景" class="headerlink" title="1、产生背景"></a>1、产生背景</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VLAN用于二层网络中隔离广播，控制和缩小广播域的范围，但不同的VLAN不能互通</span><br><span class="line">为了解决VLAN间的互通才有了VLAN间路由</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、定义"><a href="#2、定义" class="headerlink" title="2、定义"></a>2、定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设备对不同VLAN间进行三层数据转发，实现互通</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、不适当的VLAN间路由方式"><a href="#3、不适当的VLAN间路由方式" class="headerlink" title="3、不适当的VLAN间路由方式"></a>3、不适当的VLAN间路由方式</h4><p><img src="/images/VLAN%E9%97%B4%E8%B7%AF%E7%94%B1/image-20200518171441280.png" alt="image-20200518171441280"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">路由器与每个VLAN建立一条物理连接，浪费大量的端口</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、实现方式"><a href="#3、实现方式" class="headerlink" title="3、实现方式"></a>3、实现方式</h4><h5 id="3-1-单臂路由（用802-1Q和子接口实现VLAN间路由）"><a href="#3-1-单臂路由（用802-1Q和子接口实现VLAN间路由）" class="headerlink" title="3.1 单臂路由（用802.1Q和子接口实现VLAN间路由）"></a>3.1 单臂路由（用802.1Q和子接口实现VLAN间路由）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">交换机上划分多个VLAN</span><br><span class="line">路由器单线连接到交换机：</span><br><span class="line">		路由器接口：划分若干个子接口，子接口的IP为下连VLAN的网关，并绑定相应VLAN</span><br><span class="line">		交换机接口：配置Trunk，允许所有VLAN通过</span><br><span class="line">缺点：</span><br><span class="line">	1.所有子接口在同一条链路压力大，一旦连接路由器的链路挂掉将无法互通</span><br><span class="line">	2.转发效率低</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-2-三层交换（用三层交换机实现VLAN间路由）"><a href="#3-2-三层交换（用三层交换机实现VLAN间路由）" class="headerlink" title="3.2 三层交换（用三层交换机实现VLAN间路由）"></a>3.2 三层交换（用三层交换机实现VLAN间路由）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">三层交换机上启用vlanif接口，配置为网关IP</span><br><span class="line">自动产生到达所有VLAN的直连路由</span><br><span class="line">对比路由器的优势：</span><br><span class="line">		转发效率高</span><br><span class="line">		接口数量大</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/VLAN%E9%97%B4%E8%B7%AF%E7%94%B1/image-20200518173150778.png" alt="image-20200518173150778"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">三层交换机以内置的三层路由转发引擎执行VLAN间路由功能</span><br></pre></td></tr></table></figure>
+
+
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>

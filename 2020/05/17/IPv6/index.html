@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>IPv6 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">IPv6</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-17</span>
+  </div>
+  <div class="post-content">
+    <h2 id="IPv6"><a href="#IPv6" class="headerlink" title="IPv6"></a>IPv6</h2><h4 id="1、IPv4的问题"><a href="#1、IPv4的问题" class="headerlink" title="1、IPv4的问题"></a>1、IPv4的问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.IPv4已经全部被使用完</span><br><span class="line">2.终端用户配置不够简便</span><br><span class="line">3.协议本身不具备安全性和QOS特性</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、IPv6的优势"><a href="#2、IPv6的优势" class="headerlink" title="2、IPv6的优势"></a>2、IPv6的优势</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.几乎无尽的地址空间：3.4*10^38个可用地址</span><br><span class="line">2.终端用户无须任何配置，甚至不需要DHCP</span><br><span class="line">3.协议自带安全性和QOS特性</span><br><span class="line">4.最大的特点就是地址长度从32bit变为128bit</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、IPv6地址表示方式"><a href="#3、IPv6地址表示方式" class="headerlink" title="3、IPv6地址表示方式"></a>3、IPv6地址表示方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.冒号十六进制格式</span><br><span class="line">2.每段16位，共8段，一共128位</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-1-地址书写压缩"><a href="#3-1-地址书写压缩" class="headerlink" title="3.1 地址书写压缩"></a>3.1 地址书写压缩</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">段内前导0压缩：</span><br><span class="line">		段内前导的0可省略</span><br><span class="line">		全为0的段压缩为一个0</span><br><span class="line">		</span><br><span class="line">全0段压缩：</span><br><span class="line">		连续为0的段可用：：表示</span><br><span class="line">		一个IPv6地址内只允许使用一次全0段压缩</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/IPv6/image-20200517214237468.png" alt="image-20200517214237468"></p>
+<h4 id="4、网段划分"><a href="#4、网段划分" class="headerlink" title="4、网段划分"></a>4、网段划分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">前缀：前缀长度和数字一致则为同一网段</span><br><span class="line">接口标识符：根据Mac地址计算而来，全球唯一，或手动配置</span><br><span class="line">前缀长度：标识前缀的长度</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/IPv6/image-20200517215030263.png" alt="image-20200517215030263"></p>
+<h5 id="4-1-IEEE-EUI-64格式（接口标识符）"><a href="#4-1-IEEE-EUI-64格式（接口标识符）" class="headerlink" title="4.1 IEEE EUI-64格式（接口标识符）"></a>4.1 IEEE EUI-64格式（接口标识符）</h5><p><img src="/images/IPv6/image-20200517215345179.png" alt="image-20200517215345179"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.将Mac地址转换为二进制</span><br><span class="line">2.在长度24bit后插入FFFE（二进制为：1111 1111 1111 1110）</span><br><span class="line">3.将长度为7bit的二进制数取反</span><br><span class="line">4.最后化为16进制得出来的就是EUI-64的地址</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、地址分类"><a href="#5、地址分类" class="headerlink" title="5、地址分类"></a>5、地址分类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">单播地址：</span><br><span class="line">	未指定地址：	</span><br><span class="line">		::&#x2F;128（整个网段就这一个地址）</span><br><span class="line">		</span><br><span class="line">	本地环回地址：	</span><br><span class="line">		::1&#x2F;128</span><br><span class="line">		</span><br><span class="line">	链路本地地址：</span><br><span class="line">       	FE80::&#x2F;10</span><br><span class="line">       	仅用于同网段内部通讯，自动生成</span><br><span class="line">       	FE80::接口标识符&#x2F;10</span><br><span class="line">       	</span><br><span class="line">       站点本地地址：</span><br><span class="line">       	FEC0::&#x2F;10</span><br><span class="line">       	私有地址（已被取消，因为IPv6公网地址极大丰富）</span><br><span class="line">       	</span><br><span class="line">       全球单播地址：</span><br><span class="line">       	2000::&#x2F;3（类似于IPv4的公网地址）</span><br><span class="line">       	用于全球唯一的寻址</span><br><span class="line">       	地址范围：2000::&#x2F;3 ~~ 3FFF::&#x2F;3</span><br><span class="line">       	</span><br><span class="line">       组播地址：</span><br><span class="line">		FF::&#x2F;8</span><br><span class="line">		标识组播地址</span><br><span class="line">		广播地址属于一种特殊的组播地址</span><br><span class="line">	 </span><br><span class="line">	任播地址：</span><br><span class="line">		用于智能寻路，寻找最近的下一跳</span><br><span class="line">		从单播地址中分配</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、IPv6邻居发现协议"><a href="#6、IPv6邻居发现协议" class="headerlink" title="6、IPv6邻居发现协议"></a>6、IPv6邻居发现协议</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">主机无须任何配置就可以连通网络</span><br><span class="line">邻居发现协议所实现的功能包括有：</span><br><span class="line">		1.地址解析：</span><br><span class="line">			与IPv4中的ARP类似</span><br><span class="line">			通过交互信息解析邻居的链路层地址</span><br><span class="line">			组播发送邻居请求消息</span><br><span class="line">			单播回应邻居通告消息</span><br><span class="line">		2.路由器发现&#x2F;前缀发现：</span><br><span class="line">			用于发现网络中的路由器及前缀，有利于自动配置</span><br><span class="line">		3.地址自动配置：</span><br><span class="line">			全新的功能，用于自动生成地址</span><br><span class="line">			主机发送路由器RD请求消息，请求路由器的前缀和前缀长度</span><br><span class="line">			路由器回应路由器通告消息（回复前缀和前缀长度）</span><br><span class="line">			主机使用路由器回复的前缀+接口标识符&#x2F;前缀长度，自动产生IPv6全球单播地址</span><br><span class="line">		4.其他：</span><br><span class="line">			地址重复检测等</span><br></pre></td></tr></table></figure>
+
+
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
