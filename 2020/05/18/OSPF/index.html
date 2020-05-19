@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>OSPF - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">OSPF</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-18</span>
+  </div>
+  <div class="post-content">
+    <h2 id="OSPF基础"><a href="#OSPF基础" class="headerlink" title="OSPF基础"></a>OSPF基础</h2><h4 id="1、RIP的缺陷"><a href="#1、RIP的缺陷" class="headerlink" title="1、RIP的缺陷"></a>1、RIP的缺陷</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.最大跳数限制了网络规模</span><br><span class="line">2.以跳数为度量值无法准确判断最优路径</span><br><span class="line">3.路有更新发送完整路由表消耗网络带宽</span><br><span class="line">4.收敛速度慢</span><br><span class="line">5.协议会产生路由自环</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、OSPF的定义"><a href="#2、OSPF的定义" class="headerlink" title="2、OSPF的定义"></a>2、OSPF的定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OSPF（开放式最短路径优先，基于链路状态特征）</span><br><span class="line">工作在IP层，协议号89</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、OSPF初始化流程"><a href="#3、OSPF初始化流程" class="headerlink" title="3、OSPF初始化流程"></a>3、OSPF初始化流程</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">1.建立邻居和邻接关系：</span><br><span class="line">	发送hello报文发现和建立邻居关系，组播地址224.0.0.5：</span><br><span class="line">						接口up</span><br><span class="line">						双方接口IP地址在同一网段</span><br><span class="line">						双方接口在同一区域</span><br><span class="line">	选举DR&#x2F;BDR，建立邻接关系：</span><br><span class="line">			DR&#x2F;BDR选举：</span><br><span class="line">                      选举原因：广播网络中使路由信息交换更加高速有序</span><br><span class="line">                      选举范围：每条广播链路上都需要选举出一个DR和BDR</span><br><span class="line">                      选举规则：</span><br><span class="line">                           1.优先级数字大的优先：默认优先级都是1，优先级为0的路由器不具备选举资格</span><br><span class="line">                           2.Router-id大的优先</span><br><span class="line">                      Router-id：</span><br><span class="line">                           定义：Rid，标识路由器的身份</span><br><span class="line">                           产生方法：</span><br><span class="line">                           	手动配置一个IPv4地址格式作为Rid</span><br><span class="line">                           	自动选举：</span><br><span class="line">                           		1.在所有环回口中选举IP地址最大的作为Rid</span><br><span class="line">                           		2.在所有物理接口中选举IP地址最大的作为Rid</span><br><span class="line">                           	*建议手动配置一个本地环回口的IP地址作为Rid*</span><br><span class="line">        *DR与BDR一旦选定，即使OSPF区域内新增优先级更高的路由器，DR和BDR也不会重新选举，只有DR和BDR都失效后，才参与选举*</span><br><span class="line">        </span><br><span class="line">        关系状态：</span><br><span class="line">        		Drother与DR建立邻接关系</span><br><span class="line">        		Drother与BDR建立邻接关系</span><br><span class="line">        		DR与BDR建立邻接关系</span><br><span class="line">			两个DRother之间保持邻居关系</span><br><span class="line">			</span><br><span class="line">2.邻接路由器之间交换链路状态信息，实现区域内链路状态数据库同步</span><br><span class="line">		相关概念：</span><br><span class="line">			链路状态通告（LSA）：</span><br><span class="line">				用来描述路由器的接口、路由条目的相关信息（接口号、开销、IP、掩码、角色、链路类型）</span><br><span class="line">			链路状态数据库（LSDB）：</span><br><span class="line">				存储本地所有LSA</span><br><span class="line">				</span><br><span class="line">		工作流程：</span><br><span class="line">			1.向邻接路由器发送DD报文，通告本地LSDB中所有LSA的摘要信息（部分信息）</span><br><span class="line">			2.收到DD后，与本地LSDB对比，向对方发送LSR报文，请求发送本机所需的LSA全部信息</span><br><span class="line">			3.收到LSR后，把对方所需的LSA的完整信息打包为一跳LSU报文，发送至对方</span><br><span class="line">			4.收到LSU后，向对方回复LSAck报文，进行确认</span><br><span class="line">			</span><br><span class="line">3.每台路由器根据本机链路状态数据库，计算到达每个目的网段的最优路由，写入路由表</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-OSPF报文类型"><a href="#4-OSPF报文类型" class="headerlink" title="4.OSPF报文类型"></a>4.OSPF报文类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Hello报文</span><br><span class="line">DD报文：</span><br><span class="line">	数据库描述报文</span><br><span class="line">	用于描述本地LSDB中所有的LSA的摘要</span><br><span class="line">LSR报文：</span><br><span class="line">	链路状态请求</span><br><span class="line">LSU报文：</span><br><span class="line">	链路状态更新</span><br><span class="line">LSAck：</span><br><span class="line">	链路状态确认</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、OSPF分区域管理"><a href="#5、OSPF分区域管理" class="headerlink" title="5、OSPF分区域管理"></a>5、OSPF分区域管理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">分区域的原因：</span><br><span class="line">	加快收敛速度</span><br><span class="line">	把网络故障隔离在区域内部</span><br><span class="line">	</span><br><span class="line">路由器角色：</span><br><span class="line">	IR：内部路由器，所有接口都处于同一个区域</span><br><span class="line">	ABR：区域边界路由器，连接不同区域的路由器</span><br><span class="line">	ASBR：自制系统边界路由器，连接外部自治系统的路由器</span><br><span class="line">	</span><br><span class="line">区域类型：</span><br><span class="line">	骨干区域：只能有一个骨干区域，一般是区域0</span><br><span class="line">	非骨干区域：骨干区域必须是连续的，非骨干区域必须连接到骨干区域（为了防环）</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>

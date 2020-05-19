@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>路由协议概述 - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">路由协议概述</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-18</span>
+  </div>
+  <div class="post-content">
+    <h2 id="路由协议概述"><a href="#路由协议概述" class="headerlink" title="路由协议概述"></a>路由协议概述</h2><h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">路由器用来计算、维护网络路由信息的协议，通常有一定的算法、工作在传输层或应用层</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、路由协议的功能"><a href="#2、路由协议的功能" class="headerlink" title="2、路由协议的功能"></a>2、路由协议的功能</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">邻居发现：暂时理解为和我直连并且运行同一种路由协议的路由器</span><br><span class="line">路由交换：交换路由信息，最后网络收敛后都能学习到完整的路由</span><br><span class="line">路由计算：多个邻居传输的同一条路由中选举一条最优的路由，不同的协议有不同的计算方式</span><br><span class="line">路由维护：当网络拓扑发生变更，路由协议需要重新计算最优的路由</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、路由协议的分类"><a href="#3、路由协议的分类" class="headerlink" title="3、路由协议的分类"></a>3、路由协议的分类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">按照使用位置分类：</span><br><span class="line">		IGP：内部网关协议，运行在自治系统内部的路由协议</span><br><span class="line">			例：RIP，OSPF，IS-IS</span><br><span class="line">		EGP：外部网关协议，运行在自治系统之间的路由协议</span><br><span class="line">			例：BGP</span><br><span class="line">			</span><br><span class="line">自治系统：</span><br><span class="line">		AS</span><br><span class="line">		一组被统一管理，运行同一个IGP的路由器组成的网络范围</span><br><span class="line">		一般不同城域网都是不同的AS，不同运营商也是不同的AS</span><br><span class="line">		</span><br><span class="line">按照协议算法分类：</span><br><span class="line">		距离矢量协议：RIP，度量值是跳数</span><br><span class="line">		链路状态协议：OSPF，ISIS，度量值是开销</span><br><span class="line">		路径矢量协议：BGP，有多种度量值</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>

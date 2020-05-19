@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>PPP - Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=生活,博客,前端,游戏>
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/atom.xml " title="Hexo" type="application/atom+xml">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/" class="logo">Hexo</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/" class="menu-item-link">Home</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/archives" class="menu-item-link">Archives</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/about" class="menu-item-link">About</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">PPP</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-05-19</span>
+  </div>
+  <div class="post-content">
+    <h2 id="PPP"><a href="#PPP" class="headerlink" title="PPP"></a>PPP</h2><h4 id="1、产生背景"><a href="#1、产生背景" class="headerlink" title="1、产生背景"></a>1、产生背景</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">广域网协议需要适应多变的链路类型，并提供一定的安全特性</span><br><span class="line">PPP支持同异步线路，能够提供验证，并且易于扩展</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、PPP基本概念"><a href="#2、PPP基本概念" class="headerlink" title="2、PPP基本概念"></a>2、PPP基本概念</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PPP(点到点协议)：在串行线路上运行的协议</span><br><span class="line">	PPP协议支持同步和异步线路</span><br><span class="line">	PPP协议支持验证和地址协商</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、特点"><a href="#3、特点" class="headerlink" title="3、特点"></a>3、特点</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.可以工作在同异步方式下</span><br><span class="line">2.能够控制数据链路的建立</span><br><span class="line">3.支持验证，更加安全</span><br><span class="line">4.可同时支持多种网络层协议</span><br><span class="line">5.可以对网络层地址进行协商，能够远程分配IP地址</span><br><span class="line">6.无重传机制，网络开销小</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、PPP协议的组成"><a href="#4、PPP协议的组成" class="headerlink" title="4、PPP协议的组成"></a>4、PPP协议的组成</h4><p><img src="/images/PPP/image-20200519181125290.png" alt="image-20200519181125290"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PPP协议主要由LCP、NCP以及用于网络安全的可选验证协议族组成</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、工作阶段"><a href="#5、工作阶段" class="headerlink" title="5、工作阶段"></a>5、工作阶段</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">阶段1：LCP阶段</span><br><span class="line">	把串行链路设置为PPP的封装，那么接口up时就会进入此阶段</span><br><span class="line">	然后开始链路状态协商，例如数据帧的大小等等</span><br><span class="line">	</span><br><span class="line">阶段2：验证阶段（可选）</span><br><span class="line">	验证对方的身体（对方提供用户名和密码让我来验证是否是本人），默认情况不会验证，需要配置</span><br><span class="line"></span><br><span class="line">阶段3：NCP阶段</span><br><span class="line">	IP地址协商，需要互相直到对方的IP地址是多少</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、会话流程"><a href="#6、会话流程" class="headerlink" title="6、会话流程"></a>6、会话流程</h4><p><img src="/images/PPP/image-20200519181828420.png" alt="image-20200519181828420"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">刚开始时处于Dead阶段，接口UP（底层UP）会进入Establish阶段</span><br><span class="line">如果建立失败将重新回到Dead阶段</span><br><span class="line">如果协商成功将会进入Authenticate阶段，如果配置验证机制，就会进入身份验证，如果没有身份验证直接进入Network阶段，如果验证无法通过，将会关闭PPP链路进入Terminate阶段，并重新从Dead阶段再来下一次的会话流程</span><br><span class="line">在network有人手动关闭ppp链路将会进入到Terminate阶段，等接口开启重新走会话流程</span><br></pre></td></tr></table></figure>
+
+<h4 id="7、身份验证"><a href="#7、身份验证" class="headerlink" title="7、身份验证"></a>7、身份验证</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PAP验证：</span><br><span class="line">	被验证方首先发起验证请求，两次握手验证</span><br><span class="line">	密码以明文传送</span><br><span class="line">	</span><br><span class="line">主验证方会提前把用户列表创建好，等验证方设备与主验证方互联</span><br><span class="line">被验证方就会把提前输入好的用户名和密码发给主验证方</span><br><span class="line">主验证方收到后对比用户列表，如果对比上，将通过验证，否则不能通过</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/PPP/image-20200519182905062.png" alt="image-20200519182905062"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CHAP验证：</span><br><span class="line">	主验证方首先发起验证请求，三次握手验证</span><br><span class="line">	不发送密码，安全性比PAP高</span><br><span class="line">	</span><br><span class="line">主验证方要先配置好用户列表，被验证方可以提前配置好用户列表，也可以把用户名和密码配在接口上</span><br><span class="line">主验证方主动发起挑战报文（包含主机名+随机报文，主机名默认情况下是空的）</span><br><span class="line">被验证方收到后会拿自己的密码去加密这个挑战报文</span><br><span class="line">主验证方收到后，对比我自己的加密结果与被验证方的加密结果一致，将通过验证，否则不能通过</span><br></pre></td></tr></table></figure>
+
+<h4 id="8、PPP-MP"><a href="#8、PPP-MP" class="headerlink" title="8、PPP-MP"></a>8、PPP-MP</h4><p><img src="/images/PPP/image-20200519183810343.png" alt="image-20200519183810343"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MP将多个PPP链路捆绑后当做一条链路使用</span><br><span class="line">MP可以实现增加带宽、负载分担、链路备份以及降低报文时延的目的</span><br><span class="line">PPP带宽最多只有4M</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    John Doe
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
